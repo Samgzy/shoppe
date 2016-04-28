@@ -5,11 +5,13 @@
  * ------------------------------------- */
 
 // Paddings
-.padded {
-  padding-top: 5em;
-  padding-bottom: 5em;
+// .padded {
+//   padding-top: 5em;
+//   padding-bottom: 5em;
+// }
+body{
+  padding-top: 70px;
 }
-
 // Backgrounds
 .bg-black {
   background: #4a4a4a;
@@ -23,3 +25,4 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+

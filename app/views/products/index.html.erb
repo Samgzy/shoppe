@@ -1,14 +1,21 @@
 <h2>Products</h2>
-
+<div class="row">
 <% @products.each do |category, products| %>
-  <h3><%= category.name %></h3>
-  <ul>
-    <% products.each do |product| %>
-    <li>
-      <h4><%= link_to product.name, product_path(product.permalink) %></h4>
-      <p><%= product.short_description %></p>
-      <p><b>Price:</b> <%= number_to_currency product.price %></p>
-    </li>
+   <div class="col-md-12">
+      <h3><%= category.name %></h3>
+      <% products.each do |product| %>
+       <div class="col-md-4">
+        <img src="http://placehold.it/320x150" alt="">
+        <div class="caption">
+            <h4><%= link_to product.name, product_path(product.permalink) %>
+            </h4>
+            <h5><%= number_to_currency product.price %></h5>
+            <p><%= product.short_description.first(50) + "..." %></p>
+        </div>
+        </div>
+        <% end %>
+    </div>
     <% end %>
-  </ul>
-<% end %>
+  </div>
+
+
