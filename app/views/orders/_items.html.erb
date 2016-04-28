@@ -1,10 +1,10 @@
 <table width='100%' border='1'>
   <thead>
     <tr>
-      <td>Quantity</td>
-      <td>Product</td>
-      <td>Sub-Total</td>
-      <td>Tax</td>
+      <td>Quantité</td>
+      <td>Produits</td>
+      <td>Sous-Total</td>
+      <td>Tva</td>
       <td>Total</td>
     </tr>
   </thead>
@@ -32,11 +32,11 @@
   </tbody>
   <tfoot>
     <tr>
-      <td colspan='4'>Sub-Total</td>
+      <td colspan='4'>Sous-Total</td>
       <td><%= number_to_currency order.total_before_tax %></td>
     </tr>
     <tr>
-      <td colspan='4'>Tax</td>
+      <td colspan='4'>Tva</td>
       <td><%= number_to_currency order.tax %></td>
     </tr>
     <tr>

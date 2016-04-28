@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shoppe</title>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ma Maison Durable</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Leave those next 4 lines if you care about users using IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 <body>
   <% if current_order %>
     <p style="border:1px solid black;padding:10px;">
-      You have <%= pluralize current_order.total_items, 'item'%> in your basket which cost
+      Vous avez <%= pluralize current_order.total_items, 'article'%> dans votre panier
       <%= number_to_currency current_order.total_before_tax %>.
-      <%= link_to "View basket", basket_path %>
+      <%= link_to "Voir mon panier", basket_path %>
       <%= flash[:notice] %>
-      <%= link_to "Checkout", checkout_path %>
+      <%= link_to "Valider mon panier", checkout_path %>
     </p>
 <% end %>
-
-<%= yield %>
-
+  <div class="container">
+    <%= yield %>
+  </div>
+<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>
