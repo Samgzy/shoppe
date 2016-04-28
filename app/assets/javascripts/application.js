@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require shoppe/stripe/form_handler
 //= require bootstrap-sprockets
+//= require_tree .
