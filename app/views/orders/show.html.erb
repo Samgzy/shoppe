@@ -1,0 +1,3 @@
+<h2>Votre panier</h2>
+<%= render 'items', :order => current_order %>
+<p><%= link_to 'Vider mon panier', basket_path, :method => :delete %></p>

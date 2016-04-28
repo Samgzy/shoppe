@@ -46,3 +46,5 @@ group :development do
 end
 
 gem 'shoppe'
+gem "shoppe-stripe", require: "shoppe/stripe"
+gem 'shoppe-notification-emails'
